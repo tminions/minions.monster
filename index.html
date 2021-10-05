@@ -11,7 +11,49 @@
 <body>
 	<h1>milan panta</h1>
 	<!-- <img src="./minion.webp" alt="minion"> -->
-	<img width="800px" src="./spongebob-squarepants-chest.gif" alt="certified lover boy">
+	<img src="./spongebob-squarepants-chest.gif" alt="certified lover boy">
 </body>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	img {
+		max-width: 100vw;
+		min-width: 400px;
+		padding: 0;
+		margin: 0;
+	}
+</style>
+
+<script>
+	const h1 = document.querySelector("h1")
+	const img = document.querySelector("img")
+
+	const people = [
+		'hisbaan noorani',
+		'macdeini shiming niu',
+		'milan panta',
+		'shon verch',
+		'simon chen',
+		'tai zhang'
+	]
+
+	const images = [
+		"./ezgif.com-gif-maker(2).png",
+		"./image0.gif",
+		"./minion.webp",
+		"./muscle-black-guy.gif",
+		"./spongebob-squarepants-chest.gif"
+	]
+
+	const randElement = (array) => (array[Math.floor((Math.random() * array.length))])
+
+	h1.innerText = randElement(people)
+	img.src = randElement(images)
+</script>
 
 </html>
