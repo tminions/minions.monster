@@ -83,10 +83,18 @@
 		return [array[i], i]
 	}
 
-	[person, index] = randElement(people)
-
-	h1.innerText = person
-	img.src = randElement(images)[0]
+	if((Math.random() * images.length) < 1){
+		[person1, index] = randElement(people)
+		people.splice(index, 1);
+		[person2, index] = randElement(people)
+		person = person1 + " and " + person2
+		h1.innerText = person
+		img.src = "kid-running-over-kid.gif"
+	} else {
+		[person, index] = randElement(people)
+		h1.innerText = person
+		img.src = randElement(images)[0]
+	}
 
 	if (index === 0) {
 		h1.style.fontFamily = "cursive"
