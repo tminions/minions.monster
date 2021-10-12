@@ -22,7 +22,7 @@
 </audio> -->
 
 <!-- <iframe src="./fartoon.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe> -->
-<audio autoplay id="audio">
+<audio autoplay id="audio" loop>
 	<source src="./fartoon.mp3" type="audio/mp3">
 </audio>
 
@@ -47,8 +47,15 @@
 	const img = document.querySelector("img")
 	const audio = document.querySelector("audio")
 
+	let counter = 0
+
 	document.onclick = () => {
-		audio.play()
+		counter++
+
+		if (counter % 2) return audio.play()
+
+		audio.pause()
+
 	}
 
 	const people = [
