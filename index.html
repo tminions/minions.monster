@@ -9,15 +9,23 @@
 </head>
 
 <body>
+	<h2 style="font-family: 'Comic Sans MS'; cursor: pointer ; background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+  color: transparent;"> dont Click me</h2>
 	<h1>milan panta</h1>
 	<!-- <img src="./minion.webp" alt="minion"> -->
 	<img src="./spongebob-squarepants-chest.gif" alt="certified lover boy" />
 </body>
 
-<audio controls autoplay>
+<!-- <audio controls autoplay>
 	<source src="fartoon.mp3" type="audio/mpeg">
 	bruh
+</audio> -->
+
+<!-- <iframe src="./fartoon.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe> -->
+<audio autoplay id="audio">
+	<source src="./fartoon.mp3" type="audio/mp3">
 </audio>
+
 
 <style>
 	html,
@@ -37,6 +45,11 @@
 <script>
 	const h1 = document.querySelector("h1")
 	const img = document.querySelector("img")
+	const audio = document.querySelector("audio")
+
+	document.onclick = () => {
+		audio.play()
+	}
 
 	const people = [
 		"Gregory John Alexander Sherman",
