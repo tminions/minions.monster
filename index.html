@@ -76,7 +76,8 @@
 		"lorena buciu",
 		"leetcode",
 		"jayson hao",
-		"grace lin"
+		"grace lin",
+		"arsalan khan"
 	]
 
 	const images = [
@@ -103,7 +104,15 @@
 		[person2, index] = randElement(people)
 		person = person1 + " and " + person2
 		h1.innerText = person
-		img.src = "kid-running-over-kid.gif"
+
+		if (Math.random() < 0.5) {
+
+			img.src = "kid-running-over-kid.gif"
+		} else {
+			img.src = "./kiss-love-is-love.gif"
+		}
+
+
 	} else {
 		[person, index] = randElement(people)
 		h1.innerText = person
