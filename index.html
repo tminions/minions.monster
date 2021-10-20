@@ -27,6 +27,8 @@
 	<source src="./fartoon.mp3" type="audio/mp3">
 </audio>
 
+<button style="padding: 10px; font-size: 1.5em" id="asdf">button that plays Fart sound</button>
+<!-- <audio src="./fart.m4a" id="fart"></audio> -->
 
 <style>
 	html,
@@ -48,9 +50,19 @@
 	const img = document.querySelector("img")
 	const audio = document.querySelector("audio")
 
+	const asdf = document.querySelector("#asdf")
+
+	const sound = new Audio("./fart.m4a")
+
+	asdf.onclick = () => {
+		console.log("yuees");
+		sound.currentTime = 0
+		sound.play()
+	}
+
 	let counter = 0
 
-	document.onclick = () => {
+	document.querySelector("h2").onclick = () => {
 		counter++
 
 		if (counter % 2) return audio.play()
@@ -61,6 +73,7 @@
 
 	const people = [
 		"Gregory John Alexander Sherman",
+		"liying yi",
 		"hisbaan noorani",
 		"kaspar poland",
 		"macdeini shiming niu",
@@ -78,7 +91,6 @@
 		"jayson hao",
 		"grace lin",
 		"arsalan khan",
-		"liying yi"
 	]
 
 	const images = [
@@ -123,6 +135,10 @@
 	if (index === 0) {
 		h1.style.fontFamily = "cursive"
 		h1.style.fontSize = "4rem"
+	}
+
+	if (index === 1) {
+		h1.style.fontFamily = "Comic Sans MS"
 	}
 
 </script>
